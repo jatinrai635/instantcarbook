@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instant Car Booking | Best Car Booking in Raipur, Durg, Dhamtari & Rajim</title>
+<meta name="title" content="Instant Car Booking | Best Car Booking in Raipur, Durg, Dhamtari & Rajim">
+<meta name="description" content="Instant Car Booking: रायपुर, दुर्ग, धमतरी, गरियाबंद और राजिम में सबसे सस्ती और सुरक्षित कार बुकिंग सेवा। 24/7 टैक्सी और बस बुकिंग उपलब्ध।">
+<meta name="keywords" content="Instant Car Booking, InstantCarBook, Car Booking Raipur, Taxi Service Durg, Dhamtari Cab, Gariaband Taxi, Rajim Taxi Service, Rai Tech Solutions, Vehicle Rental Chhattisgarh">
+<meta name="author" content="Instant Car Booking">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://instantcarbook.netlify.app/">
+<meta property="og:title" content="Instant Car Booking | छत्तीसगढ़ का अपना व्हीकल नेटवर्क">
+<meta property="og:description" content="रायपुर, दुर्ग, धमतरी और राजिम में बेहतरीन टैक्सी और बस बुकिंग सेवा।">
+<meta property="og:image" content="https://instantcarbook.netlify.app/logo.png">
+
+<link rel="canonical" href="https://instantcarbook.netlify.app/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "Instant Car Booking",
+  "url": "https://instantcarbook.netlify.app/",
+  "logo": "https://instantcarbook.netlify.app/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+919111337413",
+    "contactType": "customer service"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Raipur"},
+    {"@type": "City", "name": "Durg"},
+    {"@type": "City", "name": "Dhamtari"},
+    {"@type": "City", "name": "Gariaband"},
+    {"@type": "City", "name": "Rajim"},
+    {"@type": "City", "name": "Bhilai"}
+  ],
+  "description": "Professional car and bus booking service in Raipur, Durg, and nearby areas."
+}
+</script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Noto Sans Devanagari', sans-serif; background: #ffffff; color: #1e293b; }
+        .section { display: none; animation: fadeIn 0.3s ease-in; }
+        .section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .logo-img { height: 85px; width: auto; object-fit: contain; cursor: pointer; }
+        .nav-active { color: #f97316 !important; background: #fff7ed; border-radius: 1.5rem; }
+        .card-shadow { border: 1px solid #f1f5f9; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: transform 0.2s; }
+        .card-shadow:hover { transform: translateY(-3px); }
+        .btn-font { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        .vehicle-card { position: relative; overflow: hidden; border-radius: 2rem; height: 250px; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: white; border: 1px solid #f1f5f9; box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: transform 0.2s; }
+        .vehicle-card:hover { transform: translateY(-3px); }
+        .vehicle-card-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .vehicle-card-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.9) 100%); z-index: 2; }
+        .vehicle-card-content { position: relative; z-index: 3; }
+        .seater-tag { position: absolute; top: 1rem; right: 1rem; background: rgba(0,0,0,0.8); color: white; text-align: center; padding: 4px 10px; border-radius: 8px; font-weight: 900; font-size: 10px; z-index: 3; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        @media (min-width: 768px) {
+            .grid-layout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .desktop-nav { display: flex !important; }
+            .mobile-nav { display: none !important; }
+        }
+    </style>
+</head>
+<body class="pb-28 md:pb-0">
+
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-[100] shadow-sm px-6 py-2">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <img src="logo.png" alt="Instant Car Booking Logo" class="logo-img" onclick="showSection('home')">
+            
+            <div class="hidden desktop-nav gap-8">
+                <button onclick="showSection('home')" class="btn-font font-black text-xs tracking-widest uppercase hover:text-orange-500">HOME</button>
+                <button onclick="showSection('book')" class="btn-font font-black text-xs tracking-widest uppercase hover:text-orange-500">BOOKING</button>
+                <button onclick="showSection('partner')" class="btn-font font-black text-xs tracking-widest uppercase hover:text-orange-500">PARTNER</button>
+                <button onclick="showSection('about')" class="btn-font font-black text-xs tracking-widest uppercase hover:text-orange-500">ABOUT</button>
+            </div>
+
+            <a href="https://wa.me/9111337413" class="bg-[#25D366] text-white p-3 rounded-2xl shadow-lg active:scale-95">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-5">
+
+        <div id="home" class="section active pt-6">
+            <div class="bg-slate-900 rounded-[2.5rem] p-10 text-white mb-8 relative overflow-hidden shadow-2xl">
+                <div class="md:w-3/4 relative z-10">
+                    <h2 class="text-3xl md:text-5xl font-black italic mb-4 leading-tight text-orange-500 uppercase italic">सफर आपका,<br><span class="text-white">भरोसा हमारा।</span></h2>
+                    <p class="text-[11px] font-bold opacity-60 uppercase tracking-widest mb-8 italic text-white">Instant Car Book: छत्तीसगढ़ का अपना प्रोफेशनल नेटवर्क।</p>
+                    <div class="flex gap-4">
+                        <button onclick="showSection('book')" class="btn-font bg-orange-500 text-white px-6 py-4 rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg">BOOK NOW</button>
+                        <button onclick="showSection('partner')" class="btn-font bg-white/10 border border-white/20 px-6 py-4 rounded-2xl font-black text-xs uppercase tracking-widest">JOIN US</button>
+                    </div>
+                </div>
+                <i class="fas fa-car-side absolute -bottom-10 -right-10 text-[12rem] opacity-5"></i>
+            </div>
+
+            <h3 class="text-lg font-black text-slate-800 mb-6 border-l-8 border-orange-500 pl-4 uppercase">हमारी <span class="text-orange-500">गाड़ियाँ</span></h3>
+            
+            <div class="grid-layout space-y-4 md:space-y-0 pb-10">
+                <div class="vehicle-card">
+                    <img src="tiago.avif" alt="Mini hatchback" class="vehicle-card-img">
+                    <div class="vehicle-card-overlay"></div>
+                    <div class="seater-tag">4+1 SEATER</div>
+                    <div class="vehicle-card-content flex items-center gap-4">
+                        <div class="flex-grow">
+                            <h4 class="font-black text-sm uppercase italic text-white">Mini</h4>
+                            <p class="text-[10px] text-slate-300 font-bold uppercase mt-1 italic leading-tight">कम बजट और लोकल के लिए सही है।</p>
+                        </div>
+                        <button onclick="showSection('book')" class="btn-font text-[9px] font-black bg-orange-500 text-white px-4 py-2 rounded-xl uppercase shrink-0">BOOK NOW</button>
+                    </div>
+                </div>
+
+                <div class="vehicle-card border-t-4 border-t-orange-500">
+                    <img src="Innova.avif" alt="SUV Comfort" class="vehicle-card-img">
+                    <div class="vehicle-card-overlay"></div>
+                    <div class="seater-tag">7+1 SEATER</div>
+                    <div class="vehicle-card-content flex items-center gap-4">
+                        <div class="flex-grow">
+                            <h4 class="font-black text-sm uppercase italic text-white">MUV / SUV Comfort</h4>
+                            <p class="text-[10px] text-slate-300 font-bold uppercase mt-1 italic leading-tight">Ertiga, Innova: लम्बे सफर और AC आराम।</p>
+                        </div>
+                        <button onclick="showSection('book')" class="btn-font text-[9px] font-black bg-orange-500 text-white px-5 py-2 rounded-xl uppercase shadow-md shrink-0">BOOK NOW</button>
+                    </div>
+                </div>
+
+                <div class="vehicle-card border-t-4 border-t-yellow-500">
+                    <img src="bmw.avif" alt="BMW Luxury" class="vehicle-card-img">
+                    <div class="vehicle-card-overlay"></div>
+                    <div class="seater-tag">4+1 SEATER</div>
+                    <div class="vehicle-card-content flex items-center gap-4">
+                        <div class="flex-grow">
+                            <h4 class="font-black text-sm uppercase italic text-white">Premium Luxury</h4>
+                            <p class="text-[10px] text-slate-300 font-bold uppercase mt-1 italic leading-tight">Audi, BMW: शादी और खास मौकों के लिए।</p>
+                        </div>
+                        <button onclick="showSection('book')" class="btn-font text-[9px] font-black bg-yellow-600 text-white px-5 py-2 rounded-xl uppercase shadow-md shrink-0">PREMIUM BOOK</button>
+                    </div>
+                </div>
+
+                <div class="vehicle-card">
+                    <img src="Traveller.webp" alt="Traveller" class="vehicle-card-img">
+                    <div class="vehicle-card-overlay"></div>
+                    <div class="seater-tag">12-50 SEATER</div>
+                    <div class="vehicle-card-content flex items-center gap-4">
+                        <div class="flex-grow">
+                            <h4 class="font-black text-sm uppercase italic text-white">Bus / Traveller</h4>
+                            <p class="text-[10px] text-slate-300 font-bold uppercase mt-1 italic leading-tight">बारात और ग्रुप पिकनिक के लिए गाड़ियाँ।</p>
+                        </div>
+                        <button onclick="showSection('book')" class="btn-font text-[9px] font-black bg-green-600 text-white px-4 py-2 rounded-xl uppercase shrink-0">GROUP BOOK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="book" class="section py-6">
+            <div class="bg-white rounded-[2.5rem] p-8 shadow-2xl border border-slate-100 max-w-2xl mx-auto">
+                <h3 class="text-2xl font-black text-slate-900 mb-8 italic uppercase text-center">बुकिंग <span class="text-orange-500">कन्फर्म करें</span></h3>
+                <form onsubmit="sendBooking(event)" class="space-y-4">
+                    
+                    <input type="text" id="custName" placeholder="आपका नाम" class="w-full bg-slate-50 p-5 rounded-2xl font-bold text-sm outline-none border-2 border-transparent focus:border-orange-500" required>
+                    
+                    <select id="carType" class="w-full bg-slate-50 p-5 rounded-2xl font-bold text-sm outline-none border-2 border-transparent focus:border-orange-500 appearance-none cursor-pointer" required>
+                        <option value="" disabled selected>गाड़ी का प्रकार चुनें (Select Car Type)</option>
+                        <option value="Mini (Tiago/Swift) 4+1">Mini (Tiago/Swift) - 4+1</option>
+                        <option value="SUV Comfort (Ertiga/Innova) 7+1">SUV Comfort (Ertiga/Innova) - 7+1</option>
+                        <option value="Premium Luxury (Audi/BMW)">Premium Luxury (Audi/BMW)</option>
+                        <option value="Bus / Traveller (Group)">Bus / Traveller (12-50 Seater)</option>
+                    </select>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" id="fromLoc" placeholder="Pickup (कहाँ से)" class="w-full bg-slate-50 p-5 rounded-2xl font-bold text-sm outline-none border-2 border-transparent focus:border-orange-500" required>
+                        <input type="text" id="toLoc" placeholder="Drop (कहाँ तक)" class="w-full bg-slate-50 p-5 rounded-2xl font-bold text-sm outline-none border-2 border-transparent focus:border-orange-500" required>
+                    </div>
+
+                    <input type="date" id="travelDate" class="w-full bg-slate-50 p-5 rounded-2xl font-bold text-sm outline-none border-2 border-transparent focus:border-orange-500" required>
+
+                    <div class="bg-orange-50 p-6 rounded-[2.5rem] border border-orange-100">
+                        <h4 class="text-[10px] font-black text-orange-600 uppercase mb-4 border-b border-orange-200 pb-2 italic tracking-widest">जरूरी जानकारी (Rules):</h4>
+                        <ul class="text-[10px] font-bold text-slate-600 space-y-3 uppercase italic leading-tight">
+                            <li class="flex gap-2"><i class="fas fa-check-circle mt-0.5 text-green-500"></i> फाइनल किराया दूरी और समय के हिसाब से तय होगा।</li>
+                            <li class="flex gap-2 text-red-600 font-black"><i class="fas fa-wallet mt-0.5"></i> बुकिंग लॉक करने के लिए छोटा एडवांस देना अनिवार्य है।</li>
+                            <li class="flex gap-2"><i class="fas fa-gas-pump mt-0.5 text-slate-500"></i> टोल, टैक्स और पार्किंग चार्ज आपको देना होगा | </li>
+                        </ul>
+                        <label class="flex items-center gap-4 mt-6 p-4 bg-white rounded-2xl cursor-pointer shadow-sm border border-orange-100 active:scale-95 transition-all">
+                            <input type="checkbox" class="w-6 h-6 accent-orange-500" required>
+                            <span class="text-[9px] font-black text-slate-900 uppercase italic">मुझे ये नियम और एडवांस पेमेंट मंजूर है</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-font w-full bg-[#25D366] text-white py-6 rounded-3xl font-black text-xs uppercase tracking-[4px] shadow-xl active:scale-95 flex items-center justify-center gap-3">
+                        <i class="fab fa-whatsapp text-2xl"></i> CONFIRM ON WHATSAPP
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="partner" class="section py-6">
+            <div class="bg-slate-900 text-white rounded-[2.5rem] p-8 shadow-2xl max-w-2xl mx-auto">
+                <h3 class="text-2xl font-black text-orange-400 mb-8 italic uppercase text-center leading-none">पार्टनर <span class="text-white">बनें</span></h3>
+                <form onsubmit="sendPartner(event)" class="space-y-4">
+                    <input type="text" id="ownerName" placeholder="मालिक का नाम" class="w-full bg-slate-800 p-5 rounded-2xl font-bold text-sm text-white outline-none border-2 border-transparent focus:border-orange-500" required>
+                    <input type="text" id="vModel" placeholder="गाड़ी का नाम और Seater (e.g. Swift 4+1)" class="w-full bg-slate-800 p-5 rounded-2xl font-bold text-sm text-white outline-none border-2 border-transparent focus:border-orange-500" required>
+                    <input type="text" id="vArea" placeholder="आपका ऑपरेटिंग एरिया" class="w-full bg-slate-800 p-5 rounded-2xl font-bold text-sm text-white outline-none border-2 border-transparent focus:border-orange-500" required>
+                    
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 mt-6">
+                        <h4 class="text-[10px] font-black text-orange-400 uppercase mb-4 italic tracking-widest border-b border-white/10 pb-2">नेटवर्क स्टैंडर्ड्स:</h4>
+                        <div class="text-[10px] text-slate-400 font-bold space-y-3 leading-relaxed uppercase italic">
+                            <p>१. गाड़ी के कागज (RC, Insurance) हमेशा अपडेट होने चाहिए।</p>
+                            <p>२. ड्राइवर का कस्टमर के साथ व्यवहार सभ्य होना चाहिए।</p>
+                        </div>
+                        <label class="flex items-center gap-3 mt-6 p-4 bg-white/5 rounded-2xl cursor-pointer border border-white/10 active:scale-95 transition-all">
+                            <input type="checkbox" class="w-5 h-5 accent-orange-500" required>
+                            <span class="text-[10px] font-black text-white uppercase italic">मुझे नेटवर्क स्टैंडर्ड्स मंजूर हैं</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-font w-full bg-white text-black py-6 rounded-3xl font-black uppercase text-[10px] tracking-[4px] shadow-xl mt-6">JOIN NETWORK</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="about" class="section py-6">
+            <div class="bg-white rounded-[2.5rem] p-10 shadow-2xl border border-slate-50 max-w-2xl mx-auto">
+                <h3 class="text-2xl font-black text-slate-900 mb-6 italic uppercase border-l-8 border-orange-500 pl-4">हमारे <span class="text-orange-500">बारे में</span></h3>
+                <div class="text-[12px] font-bold text-slate-600 space-y-4 leading-relaxed uppercase italic">
+                    <p>Instant Car Booking छत्तीसगढ़ का एक ऑनलाइन व्हीकल बुकिंग नेटवर्क है।</p>
+                    <p>हमारा उद्देश्य आपको बिना किसी परेशानी के घर बैठे सुरक्षित और प्रोफेशनल गाड़ियाँ उपलब्ध कराना है।</p>
+					<div class="mt-4 pt-4 border-t border-slate-100 space-y-2">
+    <p class="text-[11px] font-black text-slate-800 uppercase italic flex items-center gap-2">
+        <i class="fas fa-phone-alt text-orange-500"></i> संपर्क: +91 9111337413
+    </p>
+    <p class="text-[11px] font-black text-slate-800 uppercase italic flex items-center gap-2">
+        <i class="fas fa-map-marker-alt text-orange-500"></i> राजिम, छत्तीसगढ़
+    </p>
+</div>
+                    
+                </div>
+                <button onclick="showSection('home')" class="btn-font mt-10 text-[11px] font-black text-blue-800 uppercase italic underline decoration-orange-500 decoration-4">BACK TO HOME</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="fixed mobile-nav bottom-6 left-6 right-6 bg-white shadow-2xl border border-slate-100 rounded-[2.5rem] flex justify-around py-4 z-[100] md:hidden">
+        <button onclick="navToggle(this, 'home')" class="nav-btn nav-active flex-1 flex flex-col items-center">
+            <i class="fas fa-compass text-lg"></i>
+            <span class="btn-font text-[8px] font-black uppercase mt-1">EXPLORE</span>
+        </button>
+        <button onclick="navToggle(this, 'book')" class="nav-btn text-slate-300 flex-1 flex flex-col items-center">
+            <i class="fas fa-calendar-check text-lg"></i>
+            <span class="btn-font text-[8px] font-black uppercase mt-1">BOOKING</span>
+        </button>
+        <button onclick="navToggle(this, 'partner')" class="nav-btn text-slate-300 flex-1 flex flex-col items-center">
+            <i class="fas fa-plus-circle text-lg"></i>
+            <span class="btn-font text-[8px] font-black uppercase mt-1">PARTNER</span>
+        </button>
+        <button onclick="navToggle(this, 'about')" class="nav-btn text-slate-300 flex-1 flex flex-col items-center">
+            <i class="fas fa-info-circle text-lg"></i>
+            <span class="btn-font text-[8px] font-black uppercase mt-1">ABOUT</span>
+        </button>
+    </div>
+	<footer class="bg-slate-900 text-white/50 py-8 px-6 mt-10">
+    <div class="max-w-4xl mx-auto text-center">
+        <p class="text-[11px] font-bold uppercase tracking-widest mb-2 italic">
+            &copy; 2026 <span class="text-orange-500">Instant Car Booking</span>. All Rights Reserved.
+        </p>
+        
+        <p class="text-[9px] uppercase tracking-tighter mb-4">
+            Serving: Raipur • Durg • Bhilai • Dhamtari • Gariaband • Rajim
+        </p>
+        
+        <div class="pt-4 border-t border-white/5">
+    <p class="text-[10px] font-medium uppercase italic">
+        Designed & Developed by 
+        <a href="mailto:teamraitech@gmail.com" class="text-white hover:text-orange-500 transition-colors">
+            RAITECH SOLUTIONS
+        </a>
+    </p>
+</div>
+    </div>
+</footer>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            
+            if (window.innerWidth < 768) {
+                const navButtons = document.querySelectorAll('.nav-btn');
+                navButtons.forEach(btn => {
+                    btn.classList.remove('nav-active');
+                    btn.classList.add('text-slate-300');
+                    if (btn.getAttribute('onclick').includes(id)) {
+                        btn.classList.add('nav-active');
+                        btn.classList.remove('text-slate-300');
+                    }
+                });
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function navToggle(btn, id) {
+            showSection(id);
+        }
+
+        function sendBooking(e) {
+            e.preventDefault();
+            const n = document.getElementById('custName').value;
+            const c = document.getElementById('carType').value;
+            const f = document.getElementById('fromLoc').value;
+            const t = document.getElementById('toLoc').value;
+            const d = document.getElementById('travelDate').value;
+            
+            const msg = `🚀 *Instant Car Booking - नई बुकिंग*\n\n*नाम:* ${n}\n*गाड़ी:* ${c}\n*रूट:* ${f} से ${t}\n*तारीख:* ${d}\n\n*नियम:* मुझे एडवांस और नियम मंजूर हैं। ✅`;
+            window.location.href = `https://wa.me/9111337413?text=${encodeURIComponent(msg)}`;
+        }
+
+        function sendPartner(e) {
+            e.preventDefault();
+            const n = document.getElementById('ownerName').value;
+            const v = document.getElementById('vModel').value;
+            const a = document.getElementById('vArea').value;
+            const msg = `🤝 *Instant Car Booking - पार्टनर रिक्वेस्ट*\n\n*मालिक:* ${n}\n*गाड़ी:* ${v}\n*एरिया:* ${a}\n\n*नियम:* मुझे नेटवर्क स्टैंडर्ड्स मंजूर हैं। ✅`;
+            window.location.href = `https://wa.me/9111337413?text=${encodeURIComponent(msg)}`;
+        }
+    </script>
+</body>
+</html>
